@@ -39,6 +39,7 @@ public class WaitingState : FishingStateBase
             else if(reactionTimer <= 0)
             {
                 Debug.Log("Oh no, The fish got away");
+                AudioManager.Instance.PlaySfx(AudioManager.Instance.catchFailClip);
                 manager.TransitionToState(manager.IdleState);
             }
         }
@@ -51,6 +52,7 @@ public class WaitingState : FishingStateBase
 
         manager.uiManager.SetPromptText("Fish Bite! Press [Space] Quickly!");
 
+        AudioManager.Instance.PlaySfx(AudioManager.Instance.fishBiteClip);
 
         if(manager.bobber != null)
         {

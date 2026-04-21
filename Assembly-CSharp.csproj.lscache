@@ -60,6 +60,7 @@ Assets/Scripts/Fishing/
  ReelingState.cs
  WaitingState.cs
 Assets/Scripts/Managers/
+ AudioManager.cs
  GameManager.cs
  MenuManager.cs
  SceneLoader.cs

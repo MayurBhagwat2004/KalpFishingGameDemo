@@ -12,6 +12,7 @@ public class CastingState : FishingStateBase
         Debug.Log("Entering Casting State! Throwing the bobber");
     
         timer = castDuration;
+        AudioManager.Instance.PlaySfx(AudioManager.Instance.castLineClip);
 
         if(manager.bobber != null)
         {

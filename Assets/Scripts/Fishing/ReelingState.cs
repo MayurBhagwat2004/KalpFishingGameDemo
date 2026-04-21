@@ -45,11 +45,12 @@ public class ReelingState : FishingStateBase
     
         if(lineTension >= 100f)
         {
+            AudioManager.Instance.PlaySfx(AudioManager.Instance.catchFailClip);
             manager.TransitionToState(manager.IdleState);
         }
         else if(fishCatchProgress >= 100f)
         {
-            // manager.TransitionToState(manager.IdleState);
+            AudioManager.Instance.PlaySfx(AudioManager.Instance.catchSuccessClip);
             manager.CatchFish();
         }
     }

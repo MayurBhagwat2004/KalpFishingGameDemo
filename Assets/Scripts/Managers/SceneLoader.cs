@@ -8,13 +8,13 @@ public class SceneLoader : MonoBehaviour
 {
     private enum SceneNamesEnum
     {
-        FishingLevel,HomeScene
+        FishingLevel, HomeScene
     }
 
     [SerializeField] private string sceneName;
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private Slider progressBar;
-    
+
     void Start()
     {
         MenuEvents.OnPlayRequested += LoadGameScene;
@@ -23,13 +23,16 @@ public class SceneLoader : MonoBehaviour
     void OnDestroy()
     {
         MenuEvents.OnPlayRequested -= LoadGameScene;
-        
+
     }
 
     private void LoadGameScene()
     {
-    
-        if(sceneName == nameof(SceneNamesEnum.FishingLevel))
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayMusic(AudioManager.Instance.fishingMusic);
+        }
+        if (sceneName == nameof(SceneNamesEnum.FishingLevel))
         {
             StartCoroutine(LoadSceneAsync());
         }
@@ -44,7 +47,7 @@ public class SceneLoader : MonoBehaviour
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / 0.9f);
-            if(progressBar != null)
+            if (progressBar != null)
             {
                 progressBar.value = progress;
             }
@@ -53,5 +56,5 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    
+
 }
