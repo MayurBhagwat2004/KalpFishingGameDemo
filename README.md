@@ -30,3 +30,5 @@ To satisfy the Single Responsibility Principle, managers do not directly referen
 * The Main Menu uses a static `MenuEvents` action class. The UI buttons fire events, and the `SceneLoader` and `AppManager` listen for them. 
 * The `SceneLoader` safely handles `SceneManager.LoadSceneAsync`, normalizing the `0.9f` progress quirk to ensure the loading bar smoothly reflects actual loading times.
 * The `FishingManager` only calculates the math for the minigame; it passes the raw numbers to the `UIManager` to handle the visual representation of the tension and progress bars.
+
+**Playable Windows Build:** [Download .exe from Google Drive] (https://drive.google.com/file/d/1qhes_ZlnNPm-yvsOuwQwAuk-_863oMS_/view?usp=sharing)
