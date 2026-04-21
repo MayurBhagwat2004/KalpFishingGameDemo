@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadSceneAsync(mainMenuSceneIndex);
+        StartCoroutine(LoadSceneAsync());
     }
 
     private IEnumerator LoadSceneAsync()

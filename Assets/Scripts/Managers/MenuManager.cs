@@ -27,10 +27,9 @@ public class MenuManager : MonoBehaviour
         }
 
         if (lowGraphicsButton != null) lowGraphicsButton.onClick.AddListener(() => MenuEvents.OnGraphicsChanged?.Invoke(0));
-        if (medGraphicsButton != null) lowGraphicsButton.onClick.AddListener(() => MenuEvents.OnGraphicsChanged?.Invoke(1));
-        if (highGraphicsButton != null) lowGraphicsButton.onClick.AddListener(() => MenuEvents.OnGraphicsChanged?.Invoke(2));
+        if (medGraphicsButton != null) medGraphicsButton.onClick.AddListener(() => MenuEvents.OnGraphicsChanged?.Invoke(1));
+        if (highGraphicsButton != null) highGraphicsButton.onClick.AddListener(() => MenuEvents.OnGraphicsChanged?.Invoke(2));
 
-        MenuEvents.OnSettingsLoaded += UpdateSliderVisual;
 
 
 
@@ -39,6 +38,7 @@ public class MenuManager : MonoBehaviour
         closeSettingsButton.onClick.AddListener(() => MenuEvents.OnSettingsClosed?.Invoke());
         quitButton.onClick.AddListener(() => MenuEvents.OnQuitRequested?.Invoke());
 
+        MenuEvents.OnSettingsLoaded += UpdateSliderVisual;
         MenuEvents.OnSettingsOpenRequested += ShowSettings;
         MenuEvents.OnSettingsClosed += ShowMainMenu;
         MenuEvents.OnQuitRequested += DisableMenu;
@@ -48,6 +48,7 @@ public class MenuManager : MonoBehaviour
 
     void OnDestroy()
     {
+        MenuEvents.OnSettingsLoaded += UpdateSliderVisual;
         MenuEvents.OnSettingsOpenRequested -= ShowSettings;
         MenuEvents.OnSettingsClosed -= ShowMainMenu;
         MenuEvents.OnQuitRequested -= DisableMenu;
@@ -63,6 +64,8 @@ public class MenuManager : MonoBehaviour
     {
         settingsPanel.SetActive(true);
         mainPanel.SetActive(false);
+
+
     }
 
     private void ShowMainMenu()
