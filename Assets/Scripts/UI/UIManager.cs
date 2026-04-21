@@ -6,7 +6,6 @@ public class UIManager : MonoBehaviour
 {
     [Header("State Prompts")]
     [SerializeField] private TextMeshProUGUI promptText;
-    
     [SerializeField] private GameObject miniGamePanel;
     [SerializeField] private Slider catchProgressBar;
     [SerializeField] private Slider lineTensionBar;
@@ -14,6 +13,8 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         ShowMiniGameUI(false);
+
+       
     }
 
     void Update()

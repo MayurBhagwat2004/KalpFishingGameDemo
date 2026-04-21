@@ -51,22 +51,23 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 /warnaserror+:NU1605
 
 [sourceFiles]
-Assets/Scripts/Fishing/
- CastingState.cs
- Data/FishData.cs
- FishingManager.cs
- FishingStateBase.cs
- IdleState.cs
- ReelingState.cs
- WaitingState.cs
-Assets/Scripts/Managers/
- AudioManager.cs
- GameManager.cs
- MenuManager.cs
- SceneLoader.cs
- SettingsManager.cs
 Assets/Scripts/
- MenuEvents.cs
+ Events/MenuEvents.cs
+ Fishing/
+  CastingState.cs
+  Data/FishData.cs
+  FishingManager.cs
+  FishingStateBase.cs
+  IdleState.cs
+  ReelingState.cs
+  WaitingState.cs
+ Managers/
+  AudioManager.cs
+  GameManager.cs
+  LevelManager.cs
+  MenuManager.cs
+  SceneLoader.cs
+  SettingsManager.cs
  UI/UIManager.cs
 Assets/TutorialInfo/Scripts/Readme.cs
 Temp/obj/Debug/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
