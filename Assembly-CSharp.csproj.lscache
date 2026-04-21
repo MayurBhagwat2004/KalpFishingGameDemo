@@ -59,11 +59,13 @@ Assets/Scripts/Fishing/
  IdleState.cs
  ReelingState.cs
  WaitingState.cs
-Assets/Scripts/
+Assets/Scripts/Managers/
  GameManager.cs
- MenuEvents.cs
  MenuManager.cs
  SceneLoader.cs
+ SettingsManager.cs
+Assets/Scripts/
+ MenuEvents.cs
  UI/UIManager.cs
 Assets/TutorialInfo/Scripts/Readme.cs
 Temp/obj/Debug/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
