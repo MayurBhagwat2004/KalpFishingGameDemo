@@ -1,14 +1,12 @@
-using UnityEngine;
-
-public abstract class FishingState
+public abstract class FishingStateBase
 {
-    protected FishingState manager;
+    protected FishingManager manager;
 
-    public FishingState(FishingState manager)
+    public FishingStateBase(FishingManager manager)
     {
         this.manager = manager;
     }
-    
+
     public abstract void EnterState();
     public abstract void UpdateState();
     public abstract void ExitState();

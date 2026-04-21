@@ -2,12 +2,10 @@ version=1
 
 # This file caches language service data to improve the performance of C# Dev Kit.
 # It is not intended for manual editing. It can safely be deleted and will be
-# regenerated automatically.
+# regenerated automatically. For more information, see https://aka.ms/lscache
 #
-# To exclude from version control, add *.lscache to your .gitignore file.
-#
-# To disable caching, add the following to your VS Code settings:
-#   "dotnet.projectsystem.enableLanguageServiceCache": false
+# To control where cache files are stored, use the following VS Code setting:
+#   "dotnet.projectsystem.cacheInProjectFolder": true
 
 [project]
 language=C#
@@ -53,14 +51,20 @@ TemporaryDependencyNodeTargetIdentifier=netstandard2.1
 /warnaserror+:NU1605
 
 [sourceFiles]
+Assets/Scripts/Fishing/
+ CastingState.cs
+ Data/FishData.cs
+ FishingManager.cs
+ FishingStateBase.cs
+ IdleState.cs
+ ReelingState.cs
+ WaitingState.cs
 Assets/Scripts/
  GameManager.cs
- Level/
-  FishingManager.cs
-  FishingState.cs
  MenuEvents.cs
  MenuManager.cs
  SceneLoader.cs
+ UI/UIManager.cs
 Assets/TutorialInfo/Scripts/Readme.cs
 Temp/obj/Debug/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
 
